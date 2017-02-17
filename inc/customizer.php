@@ -37,7 +37,7 @@ function astrid_customize_register( $wp_customize ) {
         array(
             'title'         => __('Header type', 'astrid'),
             'priority'      => 10,
-            'panel'         => 'astrid_header_panel', 
+            'panel'         => 'astrid_header_panel',
             'description'   => __('Select your header type', 'astrid'),
         )
     );
@@ -58,6 +58,7 @@ function astrid_customize_register( $wp_customize ) {
             'description' => __('Select the header type for your front page', 'astrid'),
             'choices' => array(
                 'image'     => __('Image', 'astrid'),
+                'video'     => __('Video', 'astrid'),
                 'nothing'   => __('Only menu', 'astrid')
             ),
         )
@@ -79,6 +80,7 @@ function astrid_customize_register( $wp_customize ) {
             'description' => __('Select the header type for all pages except the front page', 'astrid'),
             'choices' => array(
                 'image'     => __('Image', 'astrid'),
+                'video'     => __('Video', 'astrid'),
                 'nothing'   => __('Only menu', 'astrid')
             ),
         )
@@ -90,9 +92,9 @@ function astrid_customize_register( $wp_customize ) {
         array(
             'title'         => __('Header text', 'astrid'),
             'priority'      => 14,
-            'panel'         => 'astrid_header_panel', 
+            'panel'         => 'astrid_header_panel',
         )
-    );    
+    );
     $wp_customize->add_setting(
         'header_text',
         array(
@@ -126,7 +128,7 @@ function astrid_customize_register( $wp_customize ) {
             'type' => 'text',
             'priority' => 10
         )
-    );    
+    );
     $wp_customize->add_setting(
         'header_button',
         array(
@@ -160,6 +162,29 @@ function astrid_customize_register( $wp_customize ) {
         )
     );
 
+    //___Tablet header image___//
+    $wp_customize->add_setting(
+        'tablet_header',
+        array(
+            'default' => get_template_directory_uri() . '/images/header-mobile.jpg',
+            'sanitize_callback' => 'esc_url_raw',
+        )
+    );
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'tablet_header',
+            array(
+               'label'          => __( 'Tablet screens header image', 'astrid' ),
+               'type'           => 'image',
+               'section'        => 'header_image',
+               'settings'       => 'tablet_header',
+               'description'    => __( 'Add a header image for screen widths smaller than 1024px', 'astrid' ),
+               'priority'       => 10,
+            )
+        )
+    );
+
     //___Mobile header image___//
     $wp_customize->add_setting(
         'mobile_header',
@@ -177,7 +202,7 @@ function astrid_customize_register( $wp_customize ) {
                'type'           => 'image',
                'section'        => 'header_image',
                'settings'       => 'mobile_header',
-               'description'    => __( 'Add a header image for screen widths smaller than 1024px', 'astrid' ),
+               'description'    => __( 'Add a header image for screen widths smaller than 678px', 'astrid' ),
                'priority'       => 10,
             )
         )
@@ -189,7 +214,7 @@ function astrid_customize_register( $wp_customize ) {
         array(
             'title'         => __('Menu style', 'astrid'),
             'priority'      => 15,
-            'panel'         => 'astrid_header_panel', 
+            'panel'         => 'astrid_header_panel',
         )
     );
     //Sticky menu
@@ -280,7 +305,7 @@ function astrid_customize_register( $wp_customize ) {
             'type' => 'text',
             'priority' => 12
         )
-    );   
+    );
     //Headings fonts
     $wp_customize->add_setting(
         'headings_font_name',
@@ -302,7 +327,7 @@ function astrid_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'headings_font_family',
         array(
-            'sanitize_callback' => 'astrid_sanitize_text',            
+            'sanitize_callback' => 'astrid_sanitize_text',
             'default' => 'font-family: \'Josefin Sans\', sans-serif;',
         )
     );
@@ -323,7 +348,7 @@ function astrid_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '36',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'site_title_size', array(
         'type'        => 'number',
@@ -335,7 +360,7 @@ function astrid_customize_register( $wp_customize ) {
             'max'   => 80,
             'step'  => 1,
         ),
-    ) ); 
+    ) );
     // Site description
     $wp_customize->add_setting(
         'site_desc_size',
@@ -343,7 +368,7 @@ function astrid_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '14',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'site_desc_size', array(
         'type'        => 'number',
@@ -355,7 +380,7 @@ function astrid_customize_register( $wp_customize ) {
             'max'   => 50,
             'step'  => 1,
         ),
-    ) );         
+    ) );
     //H1 size
     $wp_customize->add_setting(
         'h1_size',
@@ -363,7 +388,7 @@ function astrid_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '36',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h1_size', array(
         'type'        => 'number',
@@ -383,7 +408,7 @@ function astrid_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '30',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h2_size', array(
         'type'        => 'number',
@@ -404,7 +429,7 @@ function astrid_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '24',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h3_size', array(
         'type'        => 'number',
@@ -424,7 +449,7 @@ function astrid_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '18',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h4_size', array(
         'type'        => 'number',
@@ -444,7 +469,7 @@ function astrid_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '14',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h5_size', array(
         'type'        => 'number',
@@ -464,7 +489,7 @@ function astrid_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '12',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h6_size', array(
         'type'        => 'number',
@@ -484,7 +509,7 @@ function astrid_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '14',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'body_size', array(
         'type'        => 'number',
@@ -506,8 +531,8 @@ function astrid_customize_register( $wp_customize ) {
             'title' => __('Blog options', 'astrid'),
             'priority' => 13,
         )
-    );  
-    // Blog layout  
+    );
+    // Blog layout
     $wp_customize->add_setting(
         'blog_layout',
         array(
@@ -528,13 +553,13 @@ function astrid_customize_register( $wp_customize ) {
                 'masonry-layout'    => __( 'Masonry (grid style)', 'astrid' )
             ),
         )
-    ); 
+    );
     //Full width singles
     $wp_customize->add_setting(
         'fullwidth_single',
         array(
             'sanitize_callback' => 'astrid_sanitize_checkbox',
-        )       
+        )
     );
     $wp_customize->add_control(
         'fullwidth_single',
@@ -551,7 +576,7 @@ function astrid_customize_register( $wp_customize ) {
         array(
             'sanitize_callback' => 'absint',
             'default'           => '40',
-        )       
+        )
     );
     $wp_customize->add_control( 'exc_length', array(
         'type'        => 'number',
@@ -569,8 +594,8 @@ function astrid_customize_register( $wp_customize ) {
       'hide_meta',
       array(
         'sanitize_callback' => 'astrid_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
       'hide_meta',
@@ -580,13 +605,13 @@ function astrid_customize_register( $wp_customize ) {
         'section' => 'blog_options',
         'priority' => 14,
       )
-    ); 
+    );
     //Index images
     $wp_customize->add_setting(
         'featured_image',
         array(
             'sanitize_callback' => 'astrid_sanitize_checkbox',
-        )       
+        )
     );
     $wp_customize->add_control(
         'featured_image',
@@ -650,7 +675,7 @@ function astrid_customize_register( $wp_customize ) {
     // Footer contact
     $wp_customize->add_setting('astrid_options[info]', array(
             'type'              => 'info_control',
-            'sanitize_callback' => 'esc_attr',            
+            'sanitize_callback' => 'esc_attr',
         )
     );
     $wp_customize->add_control( new Astrid_Info( $wp_customize, 'footer_contact', array(
@@ -659,14 +684,14 @@ function astrid_customize_register( $wp_customize ) {
         'settings' => 'astrid_options[info]',
         'priority' => 12
         ) )
-    );    
+    );
     //Activate contact
     $wp_customize->add_setting(
         'toggle_contact_footer',
         array(
             'sanitize_callback' => 'astrid_sanitize_checkbox',
             'default'           => 1
-        )       
+        )
     );
     $wp_customize->add_control(
         'toggle_contact_footer',
@@ -727,14 +752,14 @@ function astrid_customize_register( $wp_customize ) {
             'type' => 'text',
             'priority' => 16
         )
-    ); 
-    
-    //___Colors___//   
+    );
+
+    //___Colors___//
     //Primary color
     $wp_customize->add_setting(
         'primary_color',
         array(
-            'default'           => '#fcd088',
+            'default'           => '#ee0000',
             'sanitize_callback' => 'sanitize_hex_color',
         )
     );
@@ -788,7 +813,7 @@ function astrid_customize_register( $wp_customize ) {
                 'priority'      => 13
             )
         )
-    );    
+    );
     //Menu
     $wp_customize->add_setting(
         'menu_bg',
@@ -859,7 +884,7 @@ add_action( 'customize_register', 'astrid_customize_register' );
  */
 //Header type
 function astrid_sanitize_header( $input ) {
-    if ( in_array( $input, array( 'image', 'shortcode', 'nothing' ), true ) ) {
+    if ( in_array( $input, array( 'image', 'shortcode', 'video', 'nothing' ), true ) ) {
         return $input;
     }
 }

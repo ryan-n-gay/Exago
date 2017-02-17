@@ -1607,6 +1607,7 @@ body.page-template-page_widgetized {
 	border-bottom: 1px solid rgba(255,255,255,0.1);
 	letter-spacing: 5px;
 }
+.tablet-header,
 .small-header {
 	display: none;
 }
@@ -2118,11 +2119,12 @@ body.page-template-page_widgetized {
 @media only screen and (max-width: 1024px) {
 	.main-navigation,
 	.header-clone,
-	.large-header {
+	.large-header,
+	.small-header {
 		display: none;
 	}
 	.mobile-nav,
-	.small-header,
+	.tablet-header,
 	.btn-menu {
 		display: block;
 	}
@@ -2300,6 +2302,14 @@ body.page-template-page_widgetized {
 	.footer-contact-block {
 		width: 100%;
 		margin-bottom: 30px;
+	}
+}
+@@media only screen and (max-width: 678px) {
+	.tablet-header {
+		display: none;
+	}
+	.small-header {
+		display: block;
 	}
 }
 @media only screen and (max-width: 500px) {
