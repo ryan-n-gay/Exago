@@ -1546,7 +1546,7 @@ body.page-template-page_widgetized {
 	width: 100%;
 	z-index: 999;
 	position: relative;
-	background-color: #202529;
+	/*background-color: #202529;*/
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 	border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -1581,7 +1581,7 @@ body.page-template-page_widgetized {
 	height: 100%;
 	top: 0;
 	left: 0;
-	background-color: rgba(37, 46, 53, 0.9);
+	/*background-color: rgba(37, 46, 53, 0.9);*/
 }
 .header-info {
 	width: 100%;
