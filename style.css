@@ -1,19 +1,19 @@
 /*
-Theme Name: Astrid
-Theme URI: http://athemes.com/theme/astrid
+Theme Name: Exago
+Theme URI: http://ryanngay.com/Exago
 Author: aThemes
-Author URI: http://athemes.com
-Description: Astrid can help you to quickly create an awesome business website. All the features you need are waiting for you in this business theme: color options, fonts, full width header image, custom widgets, blog options and many other interesting and useful options.
-Version: 1.10
+Author URI: http://ryanngay.com
+Description: Exago is a theme developed specificaly for Exago Ministies by Oklahoma Baptist Universitys Computer Science Departments Senior Capstone class. Exago can help you to quickly create an awesome business website. All the features you need are waiting for you in this business theme: color options, fonts, full width header image, custom widgets, blog options and many other interesting and useful options.
+Version: 1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: astrid
+Text Domain: exago
 Tags: two-columns, right-sidebar, custom-colors, custom-background, custom-header, custom-menu, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
 
-Astrid WordPress Theme, Copyright 2016 aThemes
-Astrid is distributed under the terms of the GNU GPL v2 or later.
+Exago WordPress Theme, Copyright 2017 aThemes
+Exago is distributed under the terms of the GNU GPL v2 or later.
 
-Astrid is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Exago is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 */
@@ -43,7 +43,7 @@ h6 {
 }
 a,
 a:hover {
-	color: #fcd088;
+	color: #ee0000;
 	-webkit-transition: color 0.3s;
 	transition: color 0.3s;
 }
@@ -242,24 +242,24 @@ select {
 	color: #fff;
 	position: relative;
 	padding: 3px 0;
-	z-index: 11;	
+	z-index: 11;
 }
 .main-navigation li a::before,
 .main-navigation li a::after {
 	width: 0;
 	content: '';
-	position: absolute;	
+	position: absolute;
 	bottom: 0;
 	z-index: -1;
 	height: 100%;
 	-webkit-transition: width 0.5s;
-	transition: width 0.5s;	
+	transition: width 0.5s;
 }
 .main-navigation li a::before {
 	right: 0;
 	border-top: 1px solid #fcd088;
 }
-.main-navigation ul ul ul { 
+.main-navigation ul ul ul {
 	top: 0 !important;
 }
 .main-navigation li a::after {
@@ -345,7 +345,7 @@ select {
 	transition: all 0.3s ease-out;
 }
 .btn-menu .fa {
-	cursor: pointer;	
+	cursor: pointer;
 }
 .btn-submenu {
 	position: relative;
@@ -424,7 +424,7 @@ select {
 .comment-navigation a:hover,
 .posts-navigation a:hover,
 .post-navigation a:hover {
-	color: #fcd088;	
+	color: #fcd088;
 	text-decoration: none;
 }
 .comment-navigation .nav-next,
@@ -683,7 +683,7 @@ select {
 }
 .widget_pages li::before {
 	content: '\f016';
-	margin-right: 8px;	
+	margin-right: 8px;
 }
 .widget_recent_comments li::before {
 	content: '\f0e5';
@@ -929,7 +929,7 @@ select {
 	background-color: #fff;
 	font-size: 12px;
 	-webkit-transition: all 0.4s;
-	transition: all 0.4s;	
+	transition: all 0.4s;
 }
 a.comment-reply-link {
 	text-decoration: none;
@@ -973,7 +973,7 @@ a.comment-reply-link:hover {
 	float: left;
 }
 .comment-form-email {
-	margin-right: 2%; 
+	margin-right: 2%;
 }
 .comment-form-url {
 	margin-left: 2%;
@@ -1097,7 +1097,7 @@ img {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center;	
+    background-position: center;
 }
 .atblock {
 	position: relative;
@@ -1175,14 +1175,14 @@ section.at-3-col {
 .widget-title .title-decoration::before,
 .widget-title .title-decoration::after {
 	content: '';
-	position: absolute;	
+	position: absolute;
 }
 .widget-title .title-decoration::before,
 .widget-title .title-decoration::after {
 	width: 30px;
 	height: 1px;
 	bottom: -15px;
-	background-color: rgba(92, 98, 101, 0.3);	
+	background-color: rgba(92, 98, 101, 0.3);
 }
 .atblock .widget-title::after {
 	width: 6px;
@@ -1201,7 +1201,7 @@ section.at-3-col {
 }
 .widget-title .title-decoration::after {
 	left: -webkit-calc(50% + 10px);
-	left: -moz-calc(50% + 10px);	
+	left: -moz-calc(50% + 10px);
 	left: calc(50% + 10px);
 }
 
@@ -1315,7 +1315,7 @@ section.at-3-col {
 }
 .project-thumb {
 	position: relative;
-	overflow: hidden;	
+	overflow: hidden;
 }
 .project-thumb::before {
 	content: '';
@@ -1348,9 +1348,9 @@ section.at-3-col {
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-align-items: center;
-	align-items: center;	
+	align-items: center;
 	-webkit-transition: right 0.5s;
-	transition: right 0.5s;	
+	transition: right 0.5s;
 }
 .project-thumb:hover::before {
 	width: 100%;
@@ -1365,10 +1365,10 @@ section.at-3-col {
     background-color: rgba(255,255,255,0.2);
     position: absolute;
     left: 0;
-    top: -5px;    
+    top: -5px;
     margin-left: 20%;
 	-webkit-transition: width 0.5s 0.5s;
-	transition: width 0.5s 0.5s;	    
+	transition: width 0.5s 0.5s;
 }
 .project-title a::after {
     content: '';
@@ -1377,10 +1377,10 @@ section.at-3-col {
     background-color: rgba(255,255,255,0.2);
     position: absolute;
     right: 0;
-    bottom: -5px;    
+    bottom: -5px;
     margin-right: 20%;
 	-webkit-transition: width 0.5s 0.5s;
-	transition: width 0.5s 0.5s;	    
+	transition: width 0.5s 0.5s;
 }
 .project-thumb:hover .project-title a::before,
 .project-thumb:hover .project-title a::after {
@@ -1396,7 +1396,7 @@ section.at-3-col {
 	margin-bottom: 45px;
 	text-align: left;
 	padding: 0 15px;
-	vertical-align: top;	
+	vertical-align: top;
 }
 .testimonial-content {
 	position: relative;
@@ -1438,7 +1438,7 @@ section.at-3-col {
 	width: 24%;
 	margin-bottom: 45px;
 	padding: 0 30px;
-	vertical-align: top;	
+	vertical-align: top;
 }
 .client:nth-of-type(3n+1) {
 	clear: left;
@@ -1548,7 +1548,7 @@ body.page-template-page_widgetized {
 	position: relative;
 	background-color: #202529;
 	-webkit-transition: all 0.5s;
-	transition: all 0.5s;	
+	transition: all 0.5s;
 	border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .site-header.has-header {
@@ -1673,7 +1673,7 @@ body.page-template-page_widgetized {
 }
 /* Footer branding */
 .footer-info {
-	border-bottom: 1px solid rgba(255,255,255,0.08);	
+	border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 .footer-branding {
     display: -webkit-flex;
@@ -1682,7 +1682,7 @@ body.page-template-page_widgetized {
     -webkit-justify-content: center;
     justify-content: center;
     -webkit-align-items: center;
-    align-items: center;		
+    align-items: center;
 	width: 30%;
 	float: left;
 	text-align: center;
@@ -1698,10 +1698,10 @@ body.page-template-page_widgetized {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-justify-content: center;    
+    -webkit-justify-content: center;
     justify-content: center;
     -webkit-align-items: center;
-    align-items: center;	
+    align-items: center;
 	width: 70%;
 	padding: 60px 15px;
 	border-left: 1px solid rgba(255,255,255,0.08);
@@ -1929,7 +1929,7 @@ body.page-template-page_widgetized {
 .woocommerce .woocommerce-message:before {
 	color: #fcd088;
 }
-.woocommerce #payment #place_order:hover, 
+.woocommerce #payment #place_order:hover,
 .woocommerce-page #payment #place_order:hover,
 .woocommerce .cart .button:hover, .woocommerce .cart input.button:hover,
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover,
@@ -2120,7 +2120,7 @@ body.page-template-page_widgetized {
 	.header-clone,
 	.large-header {
 		display: none;
-	}	
+	}
 	.mobile-nav,
 	.small-header,
 	.btn-menu {
@@ -2143,7 +2143,7 @@ body.page-template-page_widgetized {
 	}
     .site-header {
         position: relative !important;
-    }	
+    }
 	.home-wrapper section {
 		background-attachment: scroll;
 	}
@@ -2153,7 +2153,7 @@ body.page-template-page_widgetized {
 	.content-area,
 	.widget-area {
 		width: 100%;
-	}	
+	}
 	.masonry-layout .hentry {
 		width: 330px;
 	}
@@ -2167,7 +2167,7 @@ body.page-template-page_widgetized {
 	}
 	.header-button {
 		margin-top: 20px;
-	}	
+	}
 	.astrid-3col {
 		width: 48%;
 	}
@@ -2195,7 +2195,7 @@ body.page-template-page_widgetized {
 	.multicolumn-row,
 	.multicolumn-row section {
 		display: block;
-	}	
+	}
 	section.at-2-col,
 	section.at-3-col {
 		width: 100%;
@@ -2221,16 +2221,16 @@ body.page-template-page_widgetized {
 		font-size: 26px !important;
 	}
 	.footer-info .container {
-		display: block;		
+		display: block;
 	}
 	.footer-branding,
 	.footer-contact {
 		display: block;
 		width: 100%;
-		border: 0;	
-		float: none;	
+		border: 0;
+		float: none;
 	}
-	.site-copyright, 
+	.site-copyright,
 	.footer-navigation {
 		width: 100%;
 		float: none;
@@ -2243,7 +2243,7 @@ body.page-template-page_widgetized {
 	.woocommerce .content-area,
 	.hentry {
 		padding: 30px;
-	}	
+	}
 	.site-main .comment-navigation,
 	.site-main .posts-navigation,
 	.site-main .post-navigation	{
@@ -2261,7 +2261,7 @@ body.page-template-page_widgetized {
 	.woocommerce ul.products li.product:nth-of-type(2n+1),
 	.woocommerce-page ul.products li.product:nth-of-type(2n+1) {
 		clear: left;
-	}	
+	}
 }
 @media only screen and (max-width: 767px) {
 	.masonry-layout .hentry {
@@ -2312,7 +2312,7 @@ body.page-template-page_widgetized {
 	.atblock .widget-title,
 	h3 {
 		font-size: 20px !important;
-	}	
+	}
 	.astrid-2col,
 	.astrid-3col {
 		padding-left: 0;
