@@ -2304,7 +2304,7 @@ body.page-template-page_widgetized {
 		margin-bottom: 30px;
 	}
 }
-@@media only screen and (max-width: 678px) {
+@media only screen and (max-width: 678px) {
 	.tablet-header {
 		display: none;
 	}
