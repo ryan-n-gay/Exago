@@ -1,8 +1,8 @@
 <?php
 /**
- * exago Theme Customizer.
+ * Exago Theme Customizer.
  *
- * @package exago
+ * @package Exago
  */
 
 function exago_customize_register( $wp_customize ) {
@@ -267,7 +267,7 @@ function exago_customize_register( $wp_customize ) {
         array(
             'title' => __('Fonts', 'exago'),
             'priority' => 15,
-            'description' => __('You can use any Google Fonts you want for the heading and/or body. See the fonts here: google.com/fonts. See the documentation if you need help with this: athemes.com/documentation/exago', 'exago'),
+            'description' => __('You can use any Google Fonts you want for the heading and/or body. See the fonts here: google.com/fonts. See the documentation if you need help with this: !!!!!documentation/exago', 'exago'),
         )
     );
 
