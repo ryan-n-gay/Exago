@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package Astrid
+ * @package exago
  */
 ?>
 
@@ -22,16 +22,16 @@
 				<div class="sidebar-column <?php echo $cols; ?>">
 					<?php dynamic_sidebar( 'footer-1'); ?>
 				</div>
-			<?php endif; ?>	
+			<?php endif; ?>
 			<?php if ( is_active_sidebar( 'footer-2' ) ) : ?>
 				<div class="sidebar-column <?php echo $cols; ?>">
 					<?php dynamic_sidebar( 'footer-2'); ?>
 				</div>
-			<?php endif; ?>	
+			<?php endif; ?>
 			<?php if ( is_active_sidebar( 'footer-3' ) ) : ?>
 				<div class="sidebar-column <?php echo $cols; ?>">
 					<?php dynamic_sidebar( 'footer-3'); ?>
 				</div>
 			<?php endif; ?>
-		</div>	
+		</div>
 	</div>

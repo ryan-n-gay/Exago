@@ -4,12 +4,12 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Astrid
+ * @package exago
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area <?php echo esc_attr(astrid_blog_layout()); ?>">
+	<div id="primary" class="content-area <?php echo esc_attr(exago_blog_layout()); ?>">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -47,7 +47,7 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-	if ( astrid_blog_layout() == 'list' ) :
+	if ( exago_blog_layout() == 'list' ) :
 		get_sidebar();
 	endif;
 get_footer();

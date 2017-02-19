@@ -2,13 +2,13 @@
 /**
  * The home template file.
  *
- * @package Astrid
+ * @package exago
  */
 
 get_header(); ?>
 
 
-	<div id="primary" class="content-area <?php echo esc_attr(astrid_blog_layout()); ?>">
+	<div id="primary" class="content-area <?php echo esc_attr(exago_blog_layout()); ?>">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -30,8 +30,8 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php 
-	if ( astrid_blog_layout() == 'list' ) :
+<?php
+	if ( exago_blog_layout() == 'list' ) :
 		get_sidebar();
 	endif;
 ?>

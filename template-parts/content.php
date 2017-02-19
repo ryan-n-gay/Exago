@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Astrid
+ * @package exago
  */
 
 ?>
@@ -22,20 +22,20 @@
 
 		if ( 'post' === get_post_type() && get_theme_mod('hide_meta') != 1 ) : ?>
 		<div class="entry-meta">
-			<?php astrid_posted_on(); ?>
+			<?php exago_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
-	</header><!-- .entry-header -->	
+	</header><!-- .entry-header -->
 
 	<?php if ( has_post_thumbnail() && ( get_theme_mod( 'featured_image' ) != 1 ) ) : ?>
 		<?php if ( is_single() ) : ?>
 		<div class="single-thumb">
-			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('astrid-large-thumb'); ?></a>
-		</div>	
+			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('exago-large-thumb'); ?></a>
+		</div>
 		<?php else : ?>
 		<div class="entry-thumb">
-			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('astrid-medium-thumb'); ?></a>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('exago-medium-thumb'); ?></a>
 		</div>
 		<?php endif; ?>
 	<?php endif; ?>
@@ -49,20 +49,20 @@
 		<?php the_excerpt(); ?>
 	</div>
 	<div class="read-more clearfix">
-		<a class="button post-button" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php esc_html_e('Read more', 'astrid'); ?></a>
+		<a class="button post-button" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php esc_html_e('Read more', 'exago'); ?></a>
 	</div>
 	<?php endif; ?>
 
 	<?php
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'astrid' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'exago' ),
 			'after'  => '</div>',
 		) );
 	?>
-		
+
 	<?php if ( is_single() && get_theme_mod('hide_meta') != 1 ) : ?>
 	<footer class="entry-footer">
-		<?php astrid_entry_footer(); ?>
+		<?php exago_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 	<?php endif; ?>
 </article><!-- #post-## -->
