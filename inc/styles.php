@@ -1,10 +1,10 @@
 <?php
 /**
- * @package Astrid
+ * @package exago
  */
 
 //Converts hex colors to rgba for the menu background color
-function astrid_hex2rgba($color, $opacity = false) {
+function exago_hex2rgba($color, $opacity = false) {
 
         if ($color[0] == '#' ) {
         	$color = substr( $color, 1 );
@@ -19,7 +19,7 @@ function astrid_hex2rgba($color, $opacity = false) {
 
 
 //Dynamic styles
-function astrid_custom_styles($custom) {
+function exago_custom_styles($custom) {
 
 	$custom = '';
 
@@ -60,7 +60,7 @@ function astrid_custom_styles($custom) {
 	$custom .= ".site-description { color:" . esc_attr($site_desc) . "}"."\n";
 
 	$menu_bg    = get_theme_mod( 'menu_bg', '#202529' );
-	$menu_rgba 	= astrid_hex2rgba($menu_bg, 0.9);
+	$menu_rgba 	= exago_hex2rgba($menu_bg, 0.9);
 	$custom .= ".site-header,.site-header.header-scrolled { background-color:" . esc_attr($menu_rgba) . "}"."\n";
 
 	$body_text = get_theme_mod( 'body_text_color', '#656D6D' );
@@ -97,6 +97,6 @@ function astrid_custom_styles($custom) {
     $custom .= "body { font-size:" . intval($body_size) . "px; }"."\n";
 
 	//Output all the styles
-	wp_add_inline_style( 'astrid-style', $custom );	
+	wp_add_inline_style( 'exago-style', $custom );
 }
-add_action( 'wp_enqueue_scripts', 'astrid_custom_styles' );
+add_action( 'wp_enqueue_scripts', 'exago_custom_styles' );
