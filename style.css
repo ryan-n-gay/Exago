@@ -2397,12 +2397,13 @@ body.page-template-page_widgetized {
 		display: block;
 	}
 	.site-branding {
-		margin-bottom: 15px;
+		/*margin-bottom: 15px;*/
 	}
 	.site-branding,
 	.btn-menu {
 		width: 100%;
-
+		margin-top: 15px;
+		margin-bottom: 15px;
 		text-align: center;
 	}
 	.site-header.has-header {
