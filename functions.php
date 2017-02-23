@@ -429,7 +429,7 @@ function exago_footer_credits() {
 		printf( __( 'Powered by %s', 'exago' ), 'WordPress' );
 	echo '</a>';
 	echo '<span class="sep"> | </span>';
-	printf( __( 'Theme: %2$s by %1$s.', 'exago' ), 'aThemes', '<a href="http://athemes.com/theme/exago" rel="designer">exago</a>' );
+	printf( __( 'Theme: %2$s by %1$s.', 'exago' ), 'OKBU Capstone', '<a href="http://ryanngay.com/theme/exago" rel="designer">Exago</a>' );
 }
 add_action( 'exago_footer', 'exago_footer_credits' );
 
