@@ -373,7 +373,7 @@ endif;
 /**
  * Footer contact
  */
-/**if ( ! function_exists( 'exago_footer_contact' ) ) :
+if ( ! function_exists( 'exago_footer_contact' ) ) :
 function exago_footer_contact() {
 	$footer_contact_address = get_theme_mod('footer_contact_address');
 	$footer_contact_email   = antispambot(get_theme_mod('footer_contact_email'));
@@ -401,7 +401,7 @@ function exago_footer_contact() {
 	echo '</div>';
 
 }
-endif;*/
+endif;
 
 /**
  * Clearfix posts
