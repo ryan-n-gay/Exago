@@ -1092,7 +1092,7 @@ a.comment-reply-link:hover {
 embed, iframe, object {
   max-width: 100%;
   border: none;
-  display: block;
+  display: center;
 }
 
 img {
