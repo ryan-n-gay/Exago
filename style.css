@@ -1091,13 +1091,7 @@ a.comment-reply-link:hover {
 
 embed, iframe, object {
   max-width: 100%;
-}
-
-iframe:focus {
-  outline: none;
-}
-
-iframe[seamless] {
+  border: none;
   display: block;
 }
 
