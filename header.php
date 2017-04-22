@@ -67,7 +67,6 @@
 
 		<?php exago_header_text(); ?>
 		<img class="logo-header" src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>">
-		<<?php endif; ?>
 	</div>
 
 	<?php elseif ( $exago_has_header == 'has-shortcode' ) : ?>
