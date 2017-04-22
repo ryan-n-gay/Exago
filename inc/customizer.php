@@ -210,7 +210,7 @@ function exago_customize_register( $wp_customize ) {
 
 		//___Header Logo Image___//
 		$wp_customize->add_setting(
-				'logo-header',
+				'header_logo',
 				array(
 						// 'default' => get_template_directory_uri() . '/images/header-mobile.jpg',
 						'sanitize_callback' => 'esc_url_raw',
@@ -223,8 +223,8 @@ function exago_customize_register( $wp_customize ) {
 						array(
 							 'label'          => __( 'Header Logo Image', 'exago' ),
 							 'type'           => 'image',
-							 'section'        => 'header_logo',
-							 'settings'       => 'logo-header',
+							 'section'        => 'header_image',
+							 'settings'       => 'header_logo',
 							 'description'    => __( 'Add a secondary image to overlap the background ', 'exago' ),
 							 'priority'       => 10,
 						)
