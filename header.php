@@ -70,7 +70,6 @@
 		<<?php endif; ?>
 	</div>
 
-
 	<?php elseif ( $exago_has_header == 'has-shortcode' ) : ?>
 	<div class="shortcode-area">
 		<?php $shortcode = get_theme_mod('exago_shortcode'); ?>
