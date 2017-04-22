@@ -1803,6 +1803,24 @@ body.page-template-page_widgetized {
   display: none;
 }
 
+/*--------------------------------------------------------------
+## Header Logo
+--------------------------------------------------------------*/
+
+.header-logo {
+  position: relative;
+  text-align: center;
+}
+
+.header-logo::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  /*background-color: rgba(37, 46, 53, 0.9);*/
+}
 
 /*--------------------------------------------------------------
 ## Footer
