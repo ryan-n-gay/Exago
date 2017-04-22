@@ -162,7 +162,30 @@ function exago_customize_register( $wp_customize ) {
         )
     );
 
-    //___Tablet header image___//
+		//___Header logo image___//
+		$wp_customize->add_setting(
+				'header_logo',
+				array(
+						'default' => get_template_directory_uri() . '/images/header-mobile.jpg',
+						'sanitize_callback' => 'esc_url_raw',
+				)
+		);
+		$wp_customize->add_control(
+				new WP_Customize_Image_Control(
+						$wp_customize,
+						'header_logo',
+						array(
+							 'label'          => __( 'Header logo image', 'exago' ),
+							 'type'           => 'image',
+							 'section'        => 'exago_header_text',
+							 'settings'       => 'header_logo',
+							 'description'    => __( 'Add a header image for screen widths smaller than 1024px', 'exago' ),
+							 'priority'       => 10,
+						)
+				)
+		);
+
+		//___Tablet header image___//
     $wp_customize->add_setting(
         'tablet_header',
         array(
