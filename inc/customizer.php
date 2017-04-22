@@ -219,7 +219,7 @@ function exago_customize_register( $wp_customize ) {
 		$wp_customize->add_control(
 				new WP_Customize_Image_Control(
 						$wp_customize,
-						'mobile_header',
+						'header_logo',
 						array(
 							 'label'          => __( 'Header Logo Image', 'exago' ),
 							 'type'           => 'image',
