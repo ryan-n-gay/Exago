@@ -212,7 +212,7 @@ function exago_customize_register( $wp_customize ) {
 		$wp_customize->add_setting(
 				'header_logo',
 				array(
-						// 'default' => get_template_directory_uri() . '/images/header-mobile.jpg',
+						'default' => get_template_directory_uri() . '/images/header-mobile.jpg',
 						'sanitize_callback' => 'esc_url_raw',
 				)
 		);
