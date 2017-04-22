@@ -49,9 +49,6 @@
 		<?php exago_header_text(); ?>
 		<img class="large-header" src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>">
 
-		<?php exago_header_text(); ?>
-		<img class="logo" src="<?php header_logo(); ?>" width="<?php echo esc_attr( get_custom_logo()->width ); ?>" alt="<?php bloginfo('name'); ?>">
-
 		<?php $mobile_default = get_template_directory_uri() . '/images/header-mobile.jpg'; ?>
 		<?php $mobile = get_theme_mod('tablet_header', $mobile_default); ?>
 		<?php if ( $mobile ) : ?>
@@ -69,6 +66,16 @@
 		<?php endif; ?>
 
 	</div>
+
+	<?php $exago_has_header = exago_has_header(); ?>
+	<?php if ( $exago_has_header == 'has-header' ) : ?>
+		<div class="header-logo">
+			<?php exago_header_text(); ?>
+			<img class="logo-header" src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>">
+			<<?php endif; ?>
+		</div>
+
+
 	<?php elseif ( $exago_has_header == 'has-shortcode' ) : ?>
 	<div class="shortcode-area">
 		<?php $shortcode = get_theme_mod('exago_shortcode'); ?>
