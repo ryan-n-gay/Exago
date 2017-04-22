@@ -65,7 +65,7 @@
 		<img class="small-header" src="<?php header_image(); ?>" width="767" alt="<?php bloginfo('name'); ?>">
 		<?php endif; ?>
 
-		<?php $header_logo = get_template_directory_uri() .  ?>
+		<?php $header_logo = get_template_directory_uri() . '/images/header-mobile.jpg'; ?>
 		<?php $logo = get_theme_mod('header_logo', $header_logo); ?>
 		<?php if ( $logo ) : ?>
 		<img class="header-logo" src="<?php echo esc_url($logo); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>">
