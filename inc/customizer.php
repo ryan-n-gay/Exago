@@ -162,6 +162,7 @@ function exago_customize_register( $wp_customize ) {
         )
     );
 
+<<<<<<< HEAD
 		//___Header logo image___//
 		$wp_customize->add_setting(
 				'header_logo',
@@ -186,6 +187,9 @@ function exago_customize_register( $wp_customize ) {
 		);
 
 		//___Tablet header image___//
+=======
+    //___Tablet header image___//
+>>>>>>> parent of 38a82c3... Header Logo
     $wp_customize->add_setting(
         'tablet_header',
         array(

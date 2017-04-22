@@ -48,9 +48,12 @@
 	<div class="header-image">
 		<?php exago_header_text(); ?>
 		<img class="large-header" src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>">
+<<<<<<< HEAD
 
 		<?php exago_header_text(); ?>
 		<img class="logo" src="<?php header_logo(); ?>" width="<?php echo esc_attr( get_custom_logo()->width ); ?>" alt="<?php bloginfo('name'); ?>">
+=======
+>>>>>>> parent of 38a82c3... Header Logo
 
 		<?php $mobile_default = get_template_directory_uri() . '/images/header-mobile.jpg'; ?>
 		<?php $mobile = get_theme_mod('tablet_header', $mobile_default); ?>
