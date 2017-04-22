@@ -175,9 +175,9 @@ function exago_customize_register( $wp_customize ) {
 						$wp_customize,
 						'header_logo',
 						array(
-							 'label'          => __( 'Header logo image', 'exago' ),
+							 'label'          => __( 'Header Logo Image', 'exago' ),
 							 'type'           => 'image',
-							 'section'        => 'header_image',
+							 'section'        => 'header_logo',
 							 'settings'       => 'header_logo',
 							 'description'    => __( 'Add a logo image to the header', 'exago' ),
 							 'priority'       => 10,
