@@ -1820,7 +1820,19 @@ body.page-template-page_widgetized {
   left: 0;
   width: 50%;
   content: '';
-  /*background-color: rgba(37, 46, 53, 0.9);*/
+}
+
+.header-logo img{
+  height: 19em;
+  width: auto;
+  transition: none;
+  line-height: 0;
+  border-width: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0;
+  position: center;
 }
 
 /*--------------------------------------------------------------
