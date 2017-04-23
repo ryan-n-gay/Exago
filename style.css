@@ -1813,7 +1813,7 @@ body.page-template-page_widgetized {
   z-index: 1;
   top: 26%;
   width: 100%;
-  height: 16em;
+  height: 15em;
 }
 
 .header-logo::after {
@@ -1825,14 +1825,14 @@ body.page-template-page_widgetized {
 }
 
 .header-logo img{
+  height: 100%;
+  width: auto;
   transition: none;
   line-height: 0;
-  border-width: none;
   text-align: left;
   margin: 0;
   padding: 0;
   letter-spacing: 0;
-  position: center;
 }
 
 /*--------------------------------------------------------------
@@ -2565,6 +2565,9 @@ body.page-template-page_widgetized {
     top: 39%;
     height: 8em;
     width: auto;
+  }
+  .header-logo img{
+    width: 95%;
   }
 }
 
