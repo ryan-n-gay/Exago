@@ -1796,7 +1796,6 @@ body.page-template-page_widgetized {
   padding: 0 15px 30px;
   letter-spacing: 5px;
   color: #fff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 24px;
 }
 
@@ -1809,9 +1808,11 @@ body.page-template-page_widgetized {
 --------------------------------------------------------------*/
 
 .header-logo {
-  position: relative;
+  position: absolute;
   text-align: center;
   z-index: 1
+  top: 25%;
+  width: 100%
 }
 
 .header-logo::after {
@@ -1823,7 +1824,7 @@ body.page-template-page_widgetized {
 }
 
 .header-logo img{
-  height: 19em;
+  height: 17em;
   width: auto;
   transition: none;
   line-height: 0;
