@@ -2563,9 +2563,8 @@ body.page-template-page_widgetized {
 
   .header-logo{
     top: 39%;
-  }
-  .header-logo img{
     height: 8em;
+    width: auto;
   }
 }
 
