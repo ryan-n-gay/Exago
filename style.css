@@ -1723,10 +1723,10 @@ body.page-template-page_widgetized {
 
 .site-header {
   position: relative;
-  z-index: 999;
+  z-index: -1;
   width: 100%;
   padding: 15px 0;
-  /*background-color: #202529;*/
+  background-color: #202529;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
