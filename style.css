@@ -1811,8 +1811,9 @@ body.page-template-page_widgetized {
   position: absolute;
   text-align: center;
   z-index: 1;
-  top: 25%;
-  width: 100%
+  top: 26%;
+  width: 100%;
+  height: 16em;
 }
 
 .header-logo::after {
@@ -1824,8 +1825,6 @@ body.page-template-page_widgetized {
 }
 
 .header-logo img{
-  height: 17em;
-  width: auto;
   transition: none;
   line-height: 0;
   border-width: none;
@@ -2560,6 +2559,13 @@ body.page-template-page_widgetized {
   }
   .small-header {
     display: block;
+  }
+
+  .header-logo{
+    top: 39%;
+  }
+  .header-logo img{
+    height: 8em;
   }
 }
 
