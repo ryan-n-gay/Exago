@@ -1803,6 +1803,7 @@ body.page-template-page_widgetized {
   display: none;
 }
 
+
 /*--------------------------------------------------------------
 ## Header Logo
 --------------------------------------------------------------*/
@@ -1824,7 +1825,7 @@ body.page-template-page_widgetized {
   content: '';
 }
 
-.header-logo img{
+.header-logo img {
   height: 100%;
   width: auto;
   transition: none;
@@ -1834,6 +1835,7 @@ body.page-template-page_widgetized {
   padding: 0;
   letter-spacing: 0;
 }
+
 
 /*--------------------------------------------------------------
 ## Footer
@@ -2340,7 +2342,7 @@ body.page-template-page_widgetized {
 --------------------------------------------------------------*/
 
 @media only screen and (max-width:1600px) {
-  .header-logo{
+  .header-logo {
     top: 24%;
     width: 100%;
     height: 18em;
@@ -2395,7 +2397,7 @@ body.page-template-page_widgetized {
   .entry-thumb {
     padding-right: 0;
   }
-  .header-logo{
+  .header-logo {
     top: 24%;
     width: 100%;
     height: 14em;
@@ -2431,7 +2433,7 @@ body.page-template-page_widgetized {
   .home-wrapper section {
     background-attachment: scroll;
   }
-  .header-logo{
+  .header-logo {
     top: 18%;
     width: 100%;
     height: 12em;
@@ -2585,19 +2587,12 @@ body.page-template-page_widgetized {
 }
 
 @media only screen and (max-width: 678px) {
-  .tablet-header {
-    display: none;
-  }
-  .small-header {
-    display: block;
-  }
-
-  .header-logo{
+  .header-logo {
     top: 34%;
     height: 8em;
     width: 100%;
   }
-  .header-logo img{
+  .header-logo img {
     width: 95%;
     height: auto;
   }
@@ -2622,5 +2617,11 @@ body.page-template-page_widgetized {
   }
   .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
     width: 100%;
+  }
+  .tablet-header {
+    display: none;
+  }
+  .small-header {
+    display: block;
   }
 }
