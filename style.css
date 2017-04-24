@@ -1770,7 +1770,7 @@ body.page-template-page_widgetized {
   width: 100%;
   height: 100%;
   content: '';
-  background-color: rgba(37, 46, 53, 0.9);
+  background-color: rgba(37, 46, 53, 0.5);
 }
 
 .header-info {
@@ -1811,9 +1811,9 @@ body.page-template-page_widgetized {
   position: absolute;
   text-align: center;
   z-index: 1;
-  top: 26%;
+  top: 28%;
   width: 100%;
-  height: 22em;
+  height: 20em;
 }
 
 .header-logo::after {
@@ -2339,7 +2339,7 @@ body.page-template-page_widgetized {
 ## Responsive
 --------------------------------------------------------------*/
 
-@@media only screen and (max-width:1600px) {
+@media only screen and (max-width:1600px) {
   .header-logo{
     top: 24%;
     width: 100%;
@@ -2347,7 +2347,7 @@ body.page-template-page_widgetized {
   }
 }
 
-@@media only screen and (max-width: 1280) {
+@media only screen and (max-width: 1280px) {
   .header-logo {
     top: 26%;
     width: 100%;
@@ -2578,12 +2578,13 @@ body.page-template-page_widgetized {
   }
 
   .header-logo{
-    top: 39%;
+    top: 40%;
     height: 8em;
-    width: auto;
+    width: 100%;
   }
   .header-logo img{
     width: 95%;
+    height: auto;
   }
 }
 
