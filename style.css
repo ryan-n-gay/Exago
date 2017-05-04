@@ -738,10 +738,12 @@ select {
 # Content
 --------------------------------------------------------------*/
 
-.anchor{
+.anchor {
   display: block;
-  height: 50px; /*same height as header*/
-  margin-top: -50px; /*same height as header*/
+  height: 50px;
+  /*same height as header*/
+  margin-top: -50px;
+  /*same height as header*/
   visibility: hidden;
 }
 
@@ -1806,7 +1808,7 @@ body.page-template-page_widgetized {
   font-size: 24px;
 }
 
-.tablet-header, .small-header {
+.small-header {
   display: none;
 }
 
@@ -2419,7 +2421,7 @@ body.page-template-page_widgetized {
     margin-top: 15px;
     margin-bottom: 15px;
   }
-  .mobile-nav, .tablet-header, .btn-menu {
+  .mobile-nav, .btn-menu {
     display: block;
   }
   .site-header .container {
@@ -2624,9 +2626,6 @@ body.page-template-page_widgetized {
   }
   .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
     width: 100%;
-  }
-  .tablet-header {
-    display: none;
   }
   .small-header {
     display: block;
