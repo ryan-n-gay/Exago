@@ -60,14 +60,6 @@
 		<img class="large-header" src="<?php header_image(); ?>" width="<?php echo esc_attr(get_custom_header()->width); ?>" alt="<?php bloginfo('name'); ?>">
 
 		<?php $mobile_default = get_template_directory_uri() . '/images/header-mobile.jpg'; ?>
-		<?php $mobile = get_theme_mod('tablet_header', $mobile_default); ?>
-		<?php if ($mobile) : ?>
-		<img class="tablet-header" src="<?php echo esc_url($mobile); ?>" width="<?php echo esc_attr(get_custom_header()->width); ?>" alt="<?php bloginfo('name'); ?>">
-		<?php else : ?>
-		<img class="tablet-header" src="<?php header_image(); ?>" width="1024" alt="<?php bloginfo('name'); ?>">
-		<?php endif; ?>
-
-		<?php $mobile_default = get_template_directory_uri() . '/images/header-mobile.jpg'; ?>
 		<?php $mobile = get_theme_mod('mobile_header', $mobile_default); ?>
 		<?php if ($mobile) : ?>
 		<img class="small-header" src="<?php echo esc_url($mobile); ?>" width="<?php echo esc_attr(get_custom_header()->width); ?>" alt="<?php bloginfo('name'); ?>">
