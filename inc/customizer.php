@@ -5,32 +5,36 @@
  * @package Exago
  */
 
-function exago_customize_register( $wp_customize ) {
-	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-    $wp_customize->get_section( 'header_image' )->panel         = 'exago_header_panel';
-    $wp_customize->get_section( 'title_tagline' )->priority     = '9';
-    $wp_customize->get_section( 'title_tagline' )->title        = __('Site branding', 'exago');
-    $wp_customize->remove_control( 'header_textcolor' );
+function exago_customize_register($wp_customize)
+{
+    $wp_customize->get_setting('blogname')->transport         = 'postMessage';
+    $wp_customize->get_setting('blogdescription')->transport  = 'postMessage';
+    $wp_customize->get_section('header_image')->panel         = 'exago_header_panel';
+    $wp_customize->get_section('title_tagline')->priority     = '9';
+    $wp_customize->get_section('title_tagline')->title        = __('Site branding', 'exago');
+    $wp_customize->remove_control('header_textcolor');
 
 
     //Titles
-    class exago_Info extends WP_Customize_Control {
+    class exago_Info extends WP_Customize_Control
+    {
         public $type = 'info';
         public $label = '';
-        public function render_content() {
-        ?>
-            <h3 style="margin-top:30px;border-bottom:1px solid;padding:5px;color:#111;text-transform:uppercase;"><?php echo esc_html( $this->label ); ?></h3>
+        public function render_content()
+        {
+            ?>
+            <h3 style="margin-top:30px;border-bottom:1px solid;padding:5px;color:#111;text-transform:uppercase;"><?php echo esc_html($this->label); ?></h3>
         <?php
+
         }
     }
     //___Header area___//
-    $wp_customize->add_panel( 'exago_header_panel', array(
+    $wp_customize->add_panel('exago_header_panel', array(
         'priority'       => 10,
         'capability'     => 'edit_theme_options',
         'theme_supports' => '',
         'title'          => __('Header area', 'exago'),
-    ) );
+    ));
     //___Header type___//
     $wp_customize->add_section(
         'exago_header_type',
@@ -106,7 +110,7 @@ function exago_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'header_text',
         array(
-            'label' => __( 'Header text', 'exago' ),
+            'label' => __('Header text', 'exago'),
             'section' => 'exago_header_text',
             'type' => 'text',
             'priority' => 10
@@ -123,7 +127,7 @@ function exago_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'header_subtext',
         array(
-            'label' => __( 'Header small text', 'exago' ),
+            'label' => __('Header small text', 'exago'),
             'section' => 'exago_header_text',
             'type' => 'text',
             'priority' => 10
@@ -139,7 +143,7 @@ function exago_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'header_button',
         array(
-            'label' => __( 'Button text', 'exago' ),
+            'label' => __('Button text', 'exago'),
             'section' => 'exago_header_text',
             'type' => 'text',
             'priority' => 10
@@ -155,33 +159,10 @@ function exago_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'header_button_url',
         array(
-            'label' => __( 'Button URL', 'exago' ),
+            'label' => __('Button URL', 'exago'),
             'section' => 'exago_header_text',
             'type' => 'text',
             'priority' => 11
-        )
-    );
-
-		//___Tablet header image___//
-    $wp_customize->add_setting(
-        'tablet_header',
-        array(
-            'default' => get_template_directory_uri() . '/images/header-mobile.jpg',
-            'sanitize_callback' => 'esc_url_raw',
-        )
-    );
-    $wp_customize->add_control(
-        new WP_Customize_Image_Control(
-            $wp_customize,
-            'tablet_header',
-            array(
-               'label'          => __( 'Tablet screens header image', 'exago' ),
-               'type'           => 'image',
-               'section'        => 'header_image',
-               'settings'       => 'tablet_header',
-               'description'    => __( 'Add a header image for screen widths smaller than 1024px', 'exago' ),
-               'priority'       => 10,
-            )
         )
     );
 
@@ -198,38 +179,38 @@ function exago_customize_register( $wp_customize ) {
             $wp_customize,
             'mobile_header',
             array(
-               'label'          => __( 'Small screens header image', 'exago' ),
+               'label'          => __('Small screens header image', 'exago'),
                'type'           => 'image',
                'section'        => 'header_image',
                'settings'       => 'mobile_header',
-               'description'    => __( 'Add a header image for screen widths smaller than 678px', 'exago' ),
+               'description'    => __('Add a header image for screen widths smaller than 678px', 'exago'),
                'priority'       => 10,
             )
         )
     );
 
-		//___Header Logo Image___//
-		$wp_customize->add_setting(
-				'header_logo',
-				array(
-						'default' => get_template_directory_uri() . '/images/header-mobile.jpg',
-						'sanitize_callback' => 'esc_url_raw',
-				)
-		);
-		$wp_customize->add_control(
-				new WP_Customize_Image_Control(
-						$wp_customize,
-						'header_logo',
-						array(
-							 'label'          => __( 'Header Logo Image', 'exago' ),
-							 'type'           => 'image',
-							 'section'        => 'header_image',
-							 'settings'       => 'header_logo',
-							 'description'    => __( 'Add a secondary image to overlap the background ', 'exago' ),
-							 'priority'       => 10,
-						)
-				)
-		);
+        //___Header Logo Image___//
+        $wp_customize->add_setting(
+                'header_logo',
+                array(
+                        'default' => get_template_directory_uri() . '/images/header-mobile.jpg',
+                        'sanitize_callback' => 'esc_url_raw',
+                )
+        );
+    $wp_customize->add_control(
+                new WP_Customize_Image_Control(
+                        $wp_customize,
+                        'header_logo',
+                        array(
+                             'label'          => __('Header Logo Image', 'exago'),
+                             'type'           => 'image',
+                             'section'        => 'header_image',
+                             'settings'       => 'header_logo',
+                             'description'    => __('Add a secondary image to overlap the background ', 'exago'),
+                             'priority'       => 10,
+                        )
+                )
+        );
 
     //___Menu style___//
     $wp_customize->add_section(
@@ -305,7 +286,7 @@ function exago_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'body_font_name',
         array(
-            'label' => __( 'Body font name/style/sets', 'exago' ),
+            'label' => __('Body font name/style/sets', 'exago'),
             'section' => 'exago_fonts',
             'type' => 'text',
             'priority' => 11
@@ -323,7 +304,7 @@ function exago_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'body_font_family',
         array(
-            'label' => __( 'Body font family', 'exago' ),
+            'label' => __('Body font family', 'exago'),
             'section' => 'exago_fonts',
             'type' => 'text',
             'priority' => 12
@@ -340,7 +321,7 @@ function exago_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'headings_font_name',
         array(
-            'label' => __( 'Headings font name/style/sets', 'exago' ),
+            'label' => __('Headings font name/style/sets', 'exago'),
             'section' => 'exago_fonts',
             'type' => 'text',
             'priority' => 14
@@ -357,7 +338,7 @@ function exago_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'headings_font_family',
         array(
-            'label' => __( 'Headings font family', 'exago' ),
+            'label' => __('Headings font family', 'exago'),
             'section' => 'exago_fonts',
             'type' => 'text',
             'priority' => 15
@@ -373,7 +354,7 @@ function exago_customize_register( $wp_customize ) {
             'transport'         => 'postMessage'
         )
     );
-    $wp_customize->add_control( 'site_title_size', array(
+    $wp_customize->add_control('site_title_size', array(
         'type'        => 'number',
         'priority'    => 17,
         'section'     => 'exago_fonts',
@@ -383,7 +364,7 @@ function exago_customize_register( $wp_customize ) {
             'max'   => 80,
             'step'  => 1,
         ),
-    ) );
+    ));
     // Site description
     $wp_customize->add_setting(
         'site_desc_size',
@@ -393,7 +374,7 @@ function exago_customize_register( $wp_customize ) {
             'transport'         => 'postMessage'
         )
     );
-    $wp_customize->add_control( 'site_desc_size', array(
+    $wp_customize->add_control('site_desc_size', array(
         'type'        => 'number',
         'priority'    => 17,
         'section'     => 'exago_fonts',
@@ -403,7 +384,7 @@ function exago_customize_register( $wp_customize ) {
             'max'   => 50,
             'step'  => 1,
         ),
-    ) );
+    ));
     //H1 size
     $wp_customize->add_setting(
         'h1_size',
@@ -413,7 +394,7 @@ function exago_customize_register( $wp_customize ) {
             'transport'         => 'postMessage'
         )
     );
-    $wp_customize->add_control( 'h1_size', array(
+    $wp_customize->add_control('h1_size', array(
         'type'        => 'number',
         'priority'    => 17,
         'section'     => 'exago_fonts',
@@ -423,7 +404,7 @@ function exago_customize_register( $wp_customize ) {
             'max'   => 60,
             'step'  => 1,
         ),
-    ) );
+    ));
     //H2 size
     $wp_customize->add_setting(
         'h2_size',
@@ -433,7 +414,7 @@ function exago_customize_register( $wp_customize ) {
             'transport'         => 'postMessage'
         )
     );
-    $wp_customize->add_control( 'h2_size', array(
+    $wp_customize->add_control('h2_size', array(
         'type'        => 'number',
         'priority'    => 18,
         'section'     => 'exago_fonts',
@@ -443,7 +424,7 @@ function exago_customize_register( $wp_customize ) {
             'max'   => 60,
             'step'  => 1,
         ),
-    ) );
+    ));
 
     //H3 size
     $wp_customize->add_setting(
@@ -454,7 +435,7 @@ function exago_customize_register( $wp_customize ) {
             'transport'         => 'postMessage'
         )
     );
-    $wp_customize->add_control( 'h3_size', array(
+    $wp_customize->add_control('h3_size', array(
         'type'        => 'number',
         'priority'    => 19,
         'section'     => 'exago_fonts',
@@ -464,7 +445,7 @@ function exago_customize_register( $wp_customize ) {
             'max'   => 60,
             'step'  => 1,
         ),
-    ) );
+    ));
     //H4 size
     $wp_customize->add_setting(
         'h4_size',
@@ -474,7 +455,7 @@ function exago_customize_register( $wp_customize ) {
             'transport'         => 'postMessage'
         )
     );
-    $wp_customize->add_control( 'h4_size', array(
+    $wp_customize->add_control('h4_size', array(
         'type'        => 'number',
         'priority'    => 20,
         'section'     => 'exago_fonts',
@@ -484,7 +465,7 @@ function exago_customize_register( $wp_customize ) {
             'max'   => 60,
             'step'  => 1,
         ),
-    ) );
+    ));
     //H5 size
     $wp_customize->add_setting(
         'h5_size',
@@ -494,7 +475,7 @@ function exago_customize_register( $wp_customize ) {
             'transport'         => 'postMessage'
         )
     );
-    $wp_customize->add_control( 'h5_size', array(
+    $wp_customize->add_control('h5_size', array(
         'type'        => 'number',
         'priority'    => 21,
         'section'     => 'exago_fonts',
@@ -504,7 +485,7 @@ function exago_customize_register( $wp_customize ) {
             'max'   => 60,
             'step'  => 1,
         ),
-    ) );
+    ));
     //H6 size
     $wp_customize->add_setting(
         'h6_size',
@@ -514,7 +495,7 @@ function exago_customize_register( $wp_customize ) {
             'transport'         => 'postMessage'
         )
     );
-    $wp_customize->add_control( 'h6_size', array(
+    $wp_customize->add_control('h6_size', array(
         'type'        => 'number',
         'priority'    => 22,
         'section'     => 'exago_fonts',
@@ -524,7 +505,7 @@ function exago_customize_register( $wp_customize ) {
             'max'   => 60,
             'step'  => 1,
         ),
-    ) );
+    ));
     //Body
     $wp_customize->add_setting(
         'body_size',
@@ -534,7 +515,7 @@ function exago_customize_register( $wp_customize ) {
             'transport'         => 'postMessage'
         )
     );
-    $wp_customize->add_control( 'body_size', array(
+    $wp_customize->add_control('body_size', array(
         'type'        => 'number',
         'priority'    => 23,
         'section'     => 'exago_fonts',
@@ -544,7 +525,7 @@ function exago_customize_register( $wp_customize ) {
             'max'   => 24,
             'step'  => 1,
         ),
-    ) );
+    ));
 
 
     //___Blog options___//
@@ -571,9 +552,9 @@ function exago_customize_register( $wp_customize ) {
             'section'   => 'blog_options',
             'priority'  => 11,
             'choices'   => array(
-                'list'           	=> __( 'List', 'exago' ),
-                'fullwidth'         => __( 'Full width (no sidebar)', 'exago' ),
-                'masonry-layout'    => __( 'Masonry (grid style)', 'exago' )
+                'list'               => __('List', 'exago'),
+                'fullwidth'         => __('Full width (no sidebar)', 'exago'),
+                'masonry-layout'    => __('Masonry (grid style)', 'exago')
             ),
         )
     );
@@ -601,7 +582,7 @@ function exago_customize_register( $wp_customize ) {
             'default'           => '40',
         )
     );
-    $wp_customize->add_control( 'exc_length', array(
+    $wp_customize->add_control('exc_length', array(
         'type'        => 'number',
         'priority'    => 13,
         'section'     => 'blog_options',
@@ -611,7 +592,7 @@ function exago_customize_register( $wp_customize ) {
             'max'   => 200,
             'step'  => 5,
         ),
-    ) );
+    ));
     //Meta
     $wp_customize->add_setting(
       'hide_meta',
@@ -688,7 +669,7 @@ function exago_customize_register( $wp_customize ) {
             $wp_customize,
             'footer_logo',
             array(
-               'label'          => __( 'Upload your footer logo', 'exago' ),
+               'label'          => __('Upload your footer logo', 'exago'),
                'type'           => 'image',
                'section'        => 'exago_footer',
                'priority'       => 11,
@@ -701,12 +682,12 @@ function exago_customize_register( $wp_customize ) {
             'sanitize_callback' => 'esc_attr',
         )
     );
-    $wp_customize->add_control( new exago_Info( $wp_customize, 'footer_contact', array(
+    $wp_customize->add_control(new exago_Info($wp_customize, 'footer_contact', array(
         'label' => __('Contact', 'exago'),
         'section' => 'exago_footer',
         'settings' => 'exago_options[info]',
         'priority' => 12
-        ) )
+        ))
     );
     //Activate contact
     $wp_customize->add_setting(
@@ -736,7 +717,7 @@ function exago_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'footer_contact_address',
         array(
-            'label' => __( 'Address', 'exago' ),
+            'label' => __('Address', 'exago'),
             'section' => 'exago_footer',
             'type' => 'text',
             'priority' => 14
@@ -753,7 +734,7 @@ function exago_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'footer_contact_email',
         array(
-            'label' => __( 'Email address', 'exago' ),
+            'label' => __('Email address', 'exago'),
             'section' => 'exago_footer',
             'type' => 'text',
             'priority' => 15
@@ -770,7 +751,7 @@ function exago_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'footer_contact_phone',
         array(
-            'label' => __( 'Phone number', 'exago' ),
+            'label' => __('Phone number', 'exago'),
             'section' => 'exago_footer',
             'type' => 'text',
             'priority' => 16
@@ -897,53 +878,59 @@ function exago_customize_register( $wp_customize ) {
             )
         )
     );
-
 }
-add_action( 'customize_register', 'exago_customize_register' );
+add_action('customize_register', 'exago_customize_register');
 
 
 /**
  * Sanitize
  */
 //Header type
-function exago_sanitize_header( $input ) {
-    if ( in_array( $input, array( 'image', 'shortcode', 'video', 'nothing' ), true ) ) {
+function exago_sanitize_header($input)
+{
+    if (in_array($input, array( 'image', 'shortcode', 'video', 'nothing' ), true)) {
         return $input;
     }
 }
 //Text
-function exago_sanitize_text( $input ) {
-    return wp_kses_post( force_balance_tags( $input ) );
+function exago_sanitize_text($input)
+{
+    return wp_kses_post(force_balance_tags($input));
 }
 //Checkboxes
-function exago_sanitize_checkbox( $input ) {
-    if ( $input == 1 ) {
+function exago_sanitize_checkbox($input)
+{
+    if ($input == 1) {
         return 1;
     } else {
         return '';
     }
 }
 //Menu style
-function exago_sanitize_menu_style( $input ) {
-    if ( in_array( $input, array( 'inline', 'centered' ), true ) ) {
+function exago_sanitize_menu_style($input)
+{
+    if (in_array($input, array( 'inline', 'centered' ), true)) {
         return $input;
     }
 }
 //Menu style
-function exago_sanitize_sticky( $input ) {
-    if ( in_array( $input, array( 'sticky', 'static' ), true ) ) {
+function exago_sanitize_sticky($input)
+{
+    if (in_array($input, array( 'sticky', 'static' ), true)) {
         return $input;
     }
 }
 //Footer widget areas
-function exago_sanitize_fwidgets( $input ) {
-    if ( in_array( $input, array( '1', '2', '3' ), true ) ) {
+function exago_sanitize_fwidgets($input)
+{
+    if (in_array($input, array( '1', '2', '3' ), true)) {
         return $input;
     }
 }
 //Blog layout
-function exago_sanitize_blog( $input ) {
-    if ( in_array( $input, array( 'list', 'fullwidth', 'masonry-layout' ), true ) ) {
+function exago_sanitize_blog($input)
+{
+    if (in_array($input, array( 'list', 'fullwidth', 'masonry-layout' ), true)) {
         return $input;
     }
 }
@@ -951,7 +938,8 @@ function exago_sanitize_blog( $input ) {
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function exago_customize_preview_js() {
-	wp_enqueue_script( 'exago_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+function exago_customize_preview_js()
+{
+    wp_enqueue_script('exago_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true);
 }
-add_action( 'customize_preview_init', 'exago_customize_preview_js' );
+add_action('customize_preview_init', 'exago_customize_preview_js');
