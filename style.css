@@ -2414,7 +2414,7 @@ body.page-template-page_widgetized {
 }
 
 @media only screen and (max-width: 1024px) {
-  .main-navigation, .header-clone, .large-header, .small-header {
+  .main-navigation, .header-clone, .small-header {
     display: none;
   }
   .masthead .container {
@@ -2626,6 +2626,9 @@ body.page-template-page_widgetized {
   }
   .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
     width: 100%;
+  }
+  .large-header {
+    display: none;
   }
   .small-header {
     display: block;
