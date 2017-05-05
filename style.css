@@ -2443,14 +2443,6 @@ body.page-template-page_widgetized {
     background-attachment: scroll;
   }
   .header-logo {
-    top: 18%;
-    width: 100%;
-    height: 12em;
-  }
-}
-
-@media only screen and (max-width: 1009) {
-  .header-logo {
     top: 30%;
     height: 14em;
   }
@@ -2560,7 +2552,7 @@ body.page-template-page_widgetized {
 }
 
 @media only screen and (max-width: 875px) {
-  .header-logo{
+  .header-logo {
     top: 28%;
     height: 13em;
   }
