@@ -2624,6 +2624,10 @@ body.page-template-page_widgetized {
   .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
     width: 100%;
   }
+  .header-logo {
+    top: 20%;
+    height: 8em;
+  }
 }
 
 @media only screen and (max-width: 475px) {
@@ -2632,5 +2636,8 @@ body.page-template-page_widgetized {
   }
   .small-header {
     display: block;
+  }
+  .header-logo{
+    top: 35%;
   }
 }
