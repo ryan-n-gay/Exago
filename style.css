@@ -2637,7 +2637,10 @@ body.page-template-page_widgetized {
   .small-header {
     display: block;
   }
-  .header-logo{
+  .header-logo {
     top: 35%;
+  }
+  .header-logo img {
+    width: 90%;
   }
 }
