@@ -2592,14 +2592,13 @@ body.page-template-page_widgetized {
     margin-bottom: 30px;
   }
   .header-logo {
-    top: 23%;
+    top: 41%;
     height: 10em;
   }
 }
 
 @media only screen and (max-width: 575px) {
   .header-logo {
-    top: 21%;
     height: 9em;
   }
 }
