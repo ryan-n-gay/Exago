@@ -2642,5 +2642,6 @@ body.page-template-page_widgetized {
   }
   .header-logo img {
     width: 90%;
+    height: auto;
   }
 }
