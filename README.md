@@ -1,6 +1,6 @@
 # === Exago ===
 
-Contributors: athemes
+Contributors: OKBU Capstone Team
 Tags: two-columns, right-sidebar, custom-colors, custom-background, custom-header, custom-menu, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
 
 Requires at least: 4.0
