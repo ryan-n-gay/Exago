@@ -740,9 +740,9 @@ select {
 
 .anchor {
   display: block;
-  height: 50px;
+  height: 100px;
   /*same height as header*/
-  margin-top: -50px;
+  margin-top: -100px;
   /*same height as header*/
   visibility: hidden;
 }
